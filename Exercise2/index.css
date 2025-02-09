@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gray: #999999;
+  --yellow: #ffbf00;
+  --gray-shadow: rgba(0, 0, 0, 0.25);
+  --yellow-shadow: #cc9900;
+  --font: Lato, sans-serif;
+  --text-color: rgba(0, 153, 102, 1);
+}
+
+.huckleberry-intro,
+.huckleberry-history {
+  font-family: var(--font);
+  line-height: 26px;
+}
+
+.huckleberry-intro {
+  margin: 0 auto;
+  padding: 50px 40px 0 0;
+  width: 50vw;
+}
+
+.name {
+  font-weight: 800;
+  margin: 30px 20px;
+}
+
+.description,
+.description-1 {
+  padding: 0 20px 30px 20px;
+}
+span {
+  color: var(--text-color);
+}
+
+.huckleberry-history {
+  background-color: var(--gray);
+  margin-top: 20px;
+  padding: 30px 0;
+  box-shadow: 0 -5px 0 0 var(--gray-shadow);
+}
+
+.history-content {
+  width: 50vw;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border: 1px solid var(--gray);
+  box-shadow: 0 5px 0 0 var(--gray-shadow);
+}
+.motto {
+  position: relative;
+  right: 40px;
+  bottom: 15px;
+  font-weight: 800;
+  font-size: 24px;
+  width: 60%;
+  padding: 15px 0 15px 40px;
+  background-color: var(--yellow);
+  box-shadow: 0 5px 0 0 var(--yellow-shadow);
+}
+
+.history,
+.history1 {
+  margin-top: 20px;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 768px) {
+  .history-content {
+    width: 92%;
+  }
+
+  .huckleberry-intro {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .huckleberry-history {
+    width: 100%;
+  }
+  .motto {
+    width: 92%;
+  }
+
+  .history-content {
+    width: 83%;
+  }
+}

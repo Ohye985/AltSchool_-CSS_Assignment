@@ -1,0 +1,787 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======================= Font (Gilroy) =================== */
+
+@font-face {
+  font-family: Gilroy-Bold;
+  font-weight: 700;
+  src: url("gilroy_font/Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Gilroy-SemiBold;
+  font-weight: 700;
+  src: url("gilroy_font/Gilroy-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Gilroy-Medium;
+  font-weight: 700;
+  src: url("gilroy_font/Gilroy-Medium.ttf") format("truetype");
+}
+
+/* ======================= Variables =================== */
+
+:root {
+  --nav-blue: rgba(0, 101, 254, 1);
+  --nav-black: rgba(20, 20, 20, 1);
+}
+
+/* ======================= Styles =================== */
+
+.navbar {
+  display: flex;
+  padding: 20px 50px 20px 80px;
+}
+
+.logo {
+  margin-right: 10%;
+  color: var(--nav-blue);
+}
+
+.nav_menus ul {
+  display: flex;
+  gap: 30px;
+  margin: 12px 80px 0 0;
+  list-style: none;
+  font-family: Gilroy-Medium, sans-serif;
+  font-size: 1.125rem;
+}
+
+.nav_menus ul a {
+  padding: 2px 10px;
+  text-decoration: none;
+  color: var(--nav-black);
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.highlight_blue {
+  color: var(--nav-blue);
+}
+
+/* Dropdown styles */
+details {
+  position: relative;
+  display: inline-block;
+}
+
+summary {
+  /* padding: 2px 12px; */
+  cursor: pointer;
+  list-style: none;
+  color: var(--nav-black);
+  border-radius: 4px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    width: 12px;
+    height: 12px;
+    background-image: url("./assets/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: bottom;
+  }
+
+  &:hover {
+    background: #f0f0f0;
+  }
+
+  &:-webkit-details-marker {
+    display: none;
+  }
+}
+
+.dropdown_content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown_content a {
+  display: block;
+  padding: 8px 16px;
+}
+
+.nav_login {
+  margin: 11px;
+  padding: 2px 0;
+  display: flex;
+  gap: 30px;
+  font-family: Gilroy-SemiBold, sans-serif;
+  font-size: 1rem;
+
+  & > a {
+    text-decoration: none;
+    color: var(--nav-blue);
+  }
+}
+
+#free_trial {
+  color: rgba(255, 255, 255, 1);
+  padding: 10px 30px;
+  margin: -10px 0 0 0;
+  border-radius: 20px;
+  background-color: var(--nav-blue);
+}
+
+/* ===================== Hero ====================== */
+
+.hero_section {
+  padding: 2% 12%;
+  color: rgba(20, 20, 20, 1);
+
+  & > h1 {
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 48px;
+    line-height: 96px;
+    text-align: center;
+
+    & .url_span {
+      color: var(--nav-blue);
+
+      &::after {
+        content: url(./assets/stroke.svg);
+        position: absolute;
+        top: 35.5%;
+        left: 42%;
+        /* width: 173.63px;
+        height: 19.91px; */
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  & > p {
+    text-align: center;
+    line-height: 28px;
+    font-size: 18px;
+    font-family: Gilroy-Medium;
+    padding: 2% 10%;
+  }
+
+  & > .hero_links {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 8% 0;
+    padding: 2% 0;
+    gap: 80px;
+    font-family: Gilroy-SemiBold, sans-serif;
+    font-size: 1rem;
+    line-height: 12px;
+
+    & a {
+      text-decoration: none;
+      color: var(--nav-blue);
+    }
+
+    .hero_links_signup {
+      padding: 1.5% 4%;
+      margin: -1.5% 0 0 0;
+      border-radius: 20px;
+      color: rgba(255, 255, 255, 1);
+      background-color: var(--nav-blue);
+    }
+  }
+}
+
+.hero_section::after {
+  content: url(./assets/vector2.svg);
+  position: relative;
+  width: 238.55px;
+  height: 251.2px;
+  bottom: 245px;
+  left: 180px;
+  z-index: -1;
+}
+
+.hero_mockup {
+  margin: 0 0 0 180px;
+  padding: 30px 90px 50px 50px;
+  border: 0.5px solid rgba(0, 101, 254, 1);
+  border-radius: 8px;
+  width: 80%;
+  background-image: linear-gradient(
+    to right,
+    rgba(226, 233, 240, 1),
+    rgba(255, 255, 255, 1) 40%
+  );
+
+  & > p {
+    text-align: center;
+    text-wrap: wrap;
+    width: 60%;
+    margin: 3% 0 0 23%;
+    font-family: Gilroy-Medium;
+    font-size: 16px;
+    line-height: 24px;
+
+    span {
+      font-family: Gilroy-SemiBold;
+    }
+  }
+}
+
+.rec_ellipse {
+  width: 90%;
+  position: absolute;
+  top: 125%;
+  right: 0;
+}
+
+/*=============== Statistics ==============*/
+.stats {
+  background-color: rgba(249, 251, 253, 1);
+  padding: 40px 0 40px 0;
+  margin-top: -11.6%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  h2 {
+    margin-right: 70px;
+    font-family: Gilroy-Bold;
+    font-size: 40px;
+    line-height: 48px;
+
+    span {
+      color: rgba(0, 90, 226, 1);
+    }
+  }
+
+  & > .stats_1,
+  & > .stats_2 {
+    display: flex;
+    gap: 60px;
+
+    .stats_number {
+      font-family: Gilroy-SemiBold;
+      font-size: 2rem;
+      line-height: 40px;
+    }
+
+    .stats_words {
+      font-family: Gilroy-Medium;
+      font-size: 1rem;
+      line-height: 24px;
+    }
+  }
+}
+
+/*============= Uses ===============*/
+.use_cases {
+  margin: 0 0 100px 0;
+  padding: 80px 80px 0 100px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  .reasons_preamble {
+    width: 60%;
+
+    h2 {
+      font-family: Gilroy-Bold;
+      font-size: 40px;
+      line-height: 32px;
+      margin-bottom: 30px;
+
+      span {
+        color: rgba(0, 90, 226, 1);
+      }
+    }
+
+    h2::before {
+      content: url(./assets/vertical-line.svg);
+      position: relative;
+      top: 15px;
+      right: 15px;
+    }
+
+    p {
+      font-family: Gilroy-Medium;
+      font-size: 1rem;
+      line-height: 28px;
+      padding: 0 40px 0 20px;
+    }
+  }
+
+  .reasons {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 30px;
+  }
+
+  .reason {
+    padding: 0 0 0 10px;
+
+    h3 {
+      font-family: Gilroy-SemiBold;
+      font-size: 2rem;
+      line-height: 28px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-family: Gilroy-Medium;
+      font-size: 0.8rem;
+      line-height: 24px;
+      margin-top: 20px;
+    }
+  }
+}
+
+/*=================== Pricing ==================*/
+.pricing {
+  margin: 40px 0 80px 0;
+
+  .pricing_preamble {
+    padding: 20px;
+
+    h2 {
+      font-family: Gilroy-Bold;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      margin-bottom: 10px;
+
+      span {
+        color: rgba(0, 90, 226, 1);
+      }
+    }
+
+    h2::before {
+      content: url(./assets/vertical-line.svg);
+      position: relative;
+      top: 15px;
+      right: 15px;
+    }
+
+    p {
+      font-family: Gilroy-Medium;
+      font-size: 1rem;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.pricing_cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .small_card {
+    border: 0.4px solid rgba(0, 90, 226, 1);
+    border-radius: 12px;
+    padding: 20px 60px;
+    position: relative;
+
+    h3 {
+      font-family: Gilroy-Medium;
+      font-size: 1.5rem;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+
+    .price_amt {
+      font-family: Gilroy-Medium;
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 10px;
+
+      .price {
+        font-family: Gilroy-Bold;
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    .price_benefit {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      font-family: Gilroy-Medium;
+      font-size: 14px;
+      line-height: 24px;
+
+      p {
+        img {
+          position: relative;
+          top: 4px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.central_card {
+  border: 0.4px solid rgba(30, 52, 72, 1);
+  border-radius: 12px;
+  background-color: rgba(30, 52, 72, 1);
+  padding: 80px 60px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  z-index: 1;
+
+  h3 {
+    font-family: Gilroy-Medium;
+    font-size: 1.5rem;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+
+  .price_amt {
+    font-family: Gilroy-Medium;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 10px;
+
+    .price {
+      font-family: Gilroy-Bold;
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  .price_benefit {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    line-height: 24px;
+
+    p {
+      img {
+        position: relative;
+        top: 4px;
+        filter: brightness(0) invert(1);
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.card_1 {
+  right: 130px;
+  top: 60px;
+}
+
+.card_3 {
+  left: 160px;
+  top: 60px;
+}
+
+.buy_plan {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 180px 0 40px 0;
+
+  .custom_pricing {
+    padding: 15px 20px;
+    font-family: Gilroy-SemiBold;
+    font-size: 1rem;
+    line-height: 12px;
+    color: rgba(0, 101, 254, 1);
+    border-radius: 20px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 101, 254, 1);
+  }
+
+  .select_plan {
+    font-family: Gilroy-SemiBold;
+    font-size: 1rem;
+    line-height: 12px;
+    padding: 15px 40px;
+    background-color: rgba(0, 101, 254, 1);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 101, 254, 1);
+    border-radius: 20px;
+  }
+}
+
+/*================ Demo ==================*/
+
+.demo {
+  padding: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #1e3448;
+  color: rgba(50, 132, 255, 1);
+
+  & > div {
+    color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    width: 35%;
+    padding: 30px 30px 40px 30px;
+    border-radius: 12px;
+
+    #url::placeholder,
+    #domain,
+    #alias::placeholder,
+    #paste {
+      color: rgba(50, 132, 255, 1);
+      font-family: Gilroy-Medium;
+    }
+
+    #url,
+    #domain,
+    #alias,
+    #paste {
+      padding: 10px;
+      outline: none;
+      border: 1px solid rgba(50, 132, 255, 1);
+      border-radius: 80px;
+    }
+
+    #url {
+      width: 100%;
+      color: rgba(50, 132, 255, 1);
+      font-size: 12px;
+    }
+
+    .dom_alias_container {
+      display: flex;
+      margin: 20px 0;
+
+      #domain {
+        width: 49%;
+        margin-right: 2%;
+        font-size: 14px;
+      }
+
+      #alias {
+        width: 49%;
+        font-size: 12px;
+      }
+    }
+
+    #paste {
+      width: 100%;
+      background-color: rgba(0, 90, 226, 1);
+      color: rgba(255, 255, 255, 1);
+      font-size: 14px;
+    }
+
+    #wand_icon {
+      position: relative;
+      bottom: 35px;
+      left: 200px;
+    }
+  }
+
+  p {
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    line-height: 20px;
+
+    span {
+      font-family: Gilroy-Bold;
+    }
+  }
+}
+
+/*================ Accordion =================*/
+
+h2 {
+  font-family: Gilroy-Bold;
+  font-size: 40px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h2::before {
+  content: url(./assets/vertical-line.svg);
+  position: relative;
+  top: 15px;
+  right: 15px;
+}
+
+.accordion_container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.accordion {
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  padding: 18px;
+  width: 60%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-family: Gilroy-Medium;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  width: 60%;
+  font-family: Gilroy-Medium;
+  font-size: 16px;
+  line-height: 32px;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.accordion:after {
+  content: "\02795";
+  font-size: 14px;
+  float: right;
+  margin-left: 15px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+/*=================== Start prompt =======================*/
+
+.start_prompt {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e3448;
+  width: 100%;
+  padding: 80px 0 50px 0;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 50px;
+
+  p {
+    /* text-align: center; */
+    font-family: Gilroy-Bold;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 auto 40px auto;
+  }
+
+  button {
+    outline: none;
+    border: 1px solid rgba(0, 90, 226, 1);
+    padding: 12px 24px;
+    border-radius: 100px;
+    background-color: rgba(0, 90, 226, 1);
+    color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+    font-family: Gilroy-Medium;
+    font-size: 1rem;
+    line-height: 12px;
+  }
+}
+
+#footer {
+  color: rgba(7, 24, 39, 1);
+  padding: 0 50px;
+
+  .footer_container {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+    #socials {
+      display: flex;
+      justify-content: flex-start;
+      gap: 22px;
+      margin: 10px 0 0 10px;
+    }
+
+    .links_container_1,
+    .links_container_2,
+    .links_container_3,
+    .links_container_4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: Gilroy-Medium;
+
+      .links_heading {
+        font-family: Gilroy-Bold;
+        font-size: 1rem;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      .align_1, .align_2, .align_3 {
+        position: relative;
+      }
+
+      .align_1 {
+        top: 60px;
+      }
+
+      .align_2 {
+        top: 14px;
+      }
+
+      .align_3 {
+        bottom: 12px;
+      }
+
+      /* .heading_2 {
+        margin-top: 20px;
+      } */
+
+      p {
+        font-size: 1rem;
+        line-height: 24px;
+
+        a {
+          text-decoration: none;
+          color: rgba(17, 34, 50, 1);
+        }
+      }
+    }
+  }
+
+  .copy {
+    float: right;
+    margin-right: 50px;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      color: rgba(7, 24, 39, 1);
+      margin: 0 10px;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
