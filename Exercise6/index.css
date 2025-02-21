@@ -556,7 +556,7 @@ summary {
       padding: 10px;
       outline: none;
       border: 1px solid rgba(50, 132, 255, 1);
-      border-radius: 80px;
+      border-radius: 12px;
     }
 
     #url {
@@ -573,6 +573,7 @@ summary {
         width: 49%;
         margin-right: 2%;
         font-size: 14px;
+        appearance: none;
       }
 
       #alias {
@@ -586,6 +587,7 @@ summary {
       background-color: rgba(0, 90, 226, 1);
       color: rgba(255, 255, 255, 1);
       font-size: 14px;
+      border-radius: 100px;
     }
 
     #wand_icon {
@@ -603,6 +605,14 @@ summary {
     span {
       font-family: Gilroy-Bold;
     }
+  }
+
+  #demo_select_arrow {
+    width: 12px;
+    position: relative;
+    left: 140px;
+    bottom: 157px;
+    filter: invert(42%) sepia(39%) saturate(1043%) hue-rotate(178deg) brightness(109%) contrast(111%);
   }
 }
 
