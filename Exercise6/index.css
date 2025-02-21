@@ -215,6 +215,7 @@ summary {
   z-index: -1;
 }
 
+
 .hero_mockup {
   margin: 0 0 0 180px;
   padding: 30px 90px 50px 50px;
@@ -651,7 +652,7 @@ h2::before {
 }
 
 .accordion_border {
-  width: 60%;
+  width: 57%;
   border: 1px solid rgba(214, 214, 214, 1);
 }
 
