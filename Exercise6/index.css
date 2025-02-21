@@ -610,8 +610,8 @@ summary {
   #demo_select_arrow {
     width: 12px;
     position: relative;
-    left: 140px;
-    bottom: 158px;
+    left: 135px;
+    bottom: 178px;
     filter: invert(42%) sepia(39%) saturate(1043%) hue-rotate(178deg) brightness(109%) contrast(111%);
   }
 }
